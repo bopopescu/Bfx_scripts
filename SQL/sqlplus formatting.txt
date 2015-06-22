@@ -1,0 +1,13 @@
+How does one disable SQL*Plus formatting?
+
+SQL*Plus tries to format data from the database into a human friendly format. This formatting can be disabled by issuing the following SET commands:
+SET ECHO OFF
+SET NEWPAGE 0
+SET SPACE 0
+SET PAGESIZE 0
+SET FEEDBACK OFF
+SET HEADING OFF
+SET TRIMSPOOL ON
+SET TAB OFF
+These settings can also be abbreviated and entered on one line, eg.:
+SET ECHO OFF NEWP 0 SPA 0 PAGES 0 FEED OFF HEAD OFF TRIMS ON TAB OFF

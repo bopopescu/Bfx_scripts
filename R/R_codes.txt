@@ -1,0 +1,6 @@
+# create a density plot for data vectors
+plot(density(bothR5_all_score), xlab='HMM score',ylim=c(0,0.10),xlim=c(40,100),main='Density Distribution')
+lines(density(bothDX_all_score),col='red')
+lines(density(toro2R5_score),col='blue')
+lines(density(toro2DX_Score),col='green')
+legend("topright",c("Tn R5","Tn X4","Tx R5","Tx X4"),col=c("black","red","blue","green"),lty=1)
