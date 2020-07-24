@@ -134,7 +134,7 @@ def processFiles(pdb_files_dir):
                     <th bgcolor="#ccffff" valign="top">Monomer Side View<br></th>
                     <th align="left" bgcolor="#ccffff" valign="middle">Predicted Epitope<br></th>
                 </tr>"""
-    # Load master epitope result file into dictionary
+    # Load main epitope result file into dictionary
     for line in f1:
         vals = line.rstrip().split('\t')
         epitope_data[vals[3]] = vals  # was 7

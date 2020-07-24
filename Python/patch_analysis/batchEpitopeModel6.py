@@ -146,7 +146,7 @@ def processFiles(input_file):
         if not os.path.exists(datadir+d): os.mkdir(datadir+d)   # make directory if doesn't exist
         path = datadir+d+'/'                                    # define path to write index file to
         
-        # This HTML page is the master index.html for all the abs in this diam / dpx combo
+        # This HTML page is the main index.html for all the abs in this diam / dpx combo
         HTMLIDX = open(path+"index.html",'w')
         HTMLIDX.write("<html><body>")
         HTMLIDX.write("<h3>"+molec+" Epitope Analysis Results</h3><P>\n")

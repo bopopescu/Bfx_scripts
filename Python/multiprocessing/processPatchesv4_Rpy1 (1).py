@@ -51,7 +51,7 @@ def processData(nid,results):
         f.close()
         f2 = open(tmp2,'w')
         try:
-            process = subprocess.Popen(["R","--vanilla","--slave","-f",tmp], stdout=f2)
+            process = subprocess.Popen(["R","--vanilla","--subordinate","-f",tmp], stdout=f2)
             process.wait()
         except:
             print "R subprocess failed"

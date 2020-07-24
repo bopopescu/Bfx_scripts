@@ -29,7 +29,7 @@ def usage():
 
 def processFiles(datadir):
     files = os.listdir(datadir)     # get all of the result file names
-    MASTER_RESULTS = open(datadir+'/'+"master_batch_results.txt","w")  # Master result file, human readable
+    MASTER_RESULTS = open(datadir+'/'+"main_batch_results.txt","w")  # Main result file, human readable
     EPITOPES = open(datadir+'/'+'chimera_epitope_input.txt',"w")       # used as input for next script, calcFinalEpitope, to generate images and the final epitope call
     MASTER_RESULTS.write("Dir1\tDir2\tDir3\tpatch_size\tmodels_used\tpatch_depth\tmolecule\tAntibody\tResult_file\tPrimary_Epitope\tSecondary_Epitope\tpri_ep_cmd\tsec_ep_cmd\n")
     

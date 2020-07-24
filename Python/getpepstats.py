@@ -54,7 +54,7 @@ def main():
    # Establish database connection and fetch sequence record set
    #############################################################
    cur = pgConnect()
-   sql = """select v3id,mgrmseq from master_v3_commercial_set_152"""
+   sql = """select v3id,mgrmseq from main_v3_commercial_set_152"""
    cur.execute(sql)
    rows = cur.fetchall()
    

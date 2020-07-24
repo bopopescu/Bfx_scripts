@@ -101,8 +101,8 @@ def resultHTMLFile(abset,molec,ab,view):
     return code
 
 
-def processFiles(master_epitope_file):
-    f1 = open(master_epitope_file,'r')
+def processFiles(main_epitope_file):
+    f1 = open(main_epitope_file,'r')
     
     rootdir=os.getcwd()
 
@@ -110,7 +110,7 @@ def processFiles(master_epitope_file):
     ekeys = []
     mabs = []
 
-    # Load master epitope result file into dictionary
+    # Load main epitope result file into dictionary
     for line in f1:
         vals = line.rstrip().split('\t')
         if vals[0] != 'Dir1': epitope_data[vals[7]] = vals
@@ -156,7 +156,7 @@ def processFiles(master_epitope_file):
 
 
 def main(argv):
-    master_epitope_file=''
+    main_epitope_file=''
     #Read command line arguments
     try:
         opts, args = getopt.getopt(argv,"f:",["file:"])
@@ -165,8 +165,8 @@ def main(argv):
         sys.exit(2)
     for opt, arg in opts:
         if opt == "-f":
-            master_epitope_file = arg    
-            processFiles(master_epitope_file)
+            main_epitope_file = arg    
+            processFiles(main_epitope_file)
         else:
             print "There was an error, not right args\n"
             sys.exit()
